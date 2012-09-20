@@ -11,8 +11,22 @@ $_="green scaly dinosaur\n";
 print $_;
 s/(\w+) (\w+)/$2,$1/;
 print $_;
+s/^/huge,/;
+print $_;
+s/,.*een//;
+print $_;
 
+s/\w+$/($`!)$&/;
+print $_;
 
+s/\s+(!\W+)/$1 /;
+print $_;
 
+s/huge/giant/;
+print $_;
 
-
+$_="fred flintstone";
+if(s/fred/wilma/)
+{
+print "sucessfully replaced fred with wilma\n";
+}
