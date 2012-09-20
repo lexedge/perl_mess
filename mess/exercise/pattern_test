@@ -1,0 +1,19 @@
+#!/usr/bin/perl
+use warnings;
+use strict;
+
+
+chomp(my$pattern=<STDIN>);
+while(<>)
+{
+  chomp;
+  if(/$pattern/)
+  {
+    print "it matched:$`<$&>$'\n";
+  } 
+  else
+  {
+    print "no matched!\n";
+  }
+}
+
