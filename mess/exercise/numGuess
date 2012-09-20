@@ -1,0 +1,14 @@
+#!/usr/bin/perl
+##Copyright 2012 by lexEdge
+
+use warnings;
+use strict;
+
+my$code=int(1+rand 100);
+while(1)
+{
+ chomp($_=<>);
+ $_<$code||print "too low\n";
+ $_>$code||print "too high\n";
+ $_==$code||print "equal\n";
+}
