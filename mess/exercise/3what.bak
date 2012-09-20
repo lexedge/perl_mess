@@ -1,6 +1,4 @@
 #!/usr/bin/perl
-##Copyright 2012 by lexEdge
-
 
 use warnings;
 use strict;

@@ -1,3 +1,18 @@
 #!/usr/bin/perl
+##Copyright 2012 by lexEdge
+
 use warnings;
 use strict;
+
+$_="home, sweet home!";
+s/home/cave/g;
+print "$_\n";
+
+$_="Input  data\t may have     extra whitespace.\n";
+s/\s+/ /g;
+print "$_\n";
+
+chomp(my$x=<STDIN>);
+print "Hello,\L\u\l$x,Would You \ELike to play?\n";
+
+

@@ -1,3 +1,23 @@
 #!/usr/bin/perl
+##Copyright 2012 by lexEdge
+
 use warnings;
 use strict;
+
+foreach(@ARGV)
+{
+   if (open TMP,$_)
+   {
+      open OUT,"> ".$_.".out"or die "open out error";
+      print $_." ok\n";
+      while(<TMP>)
+      {
+      #   print OUT,$_;
+           s/fred/Larry/gi;
+           print OUT $_;
+      }
+      close TMP;
+      close OUT;
+   }
+
+}

@@ -1,0 +1,33 @@
+#!/usr/bin/perl
+##Copyright 2012 by lexEdge
+
+use warnings;
+use strict;
+my%todo;
+foreach(@ARGV)
+{
+ $todo{$_}=1;
+}
+while(<>)
+{
+ if(/^##Copyright/)
+ {
+ delete $todo{$ARGV};
+ }
+}
+@ARGV=sort keys%todo;
+if(@ARGV==0)
+{
+  print "no need to add copyRight\n";
+  exit 0 ;
+}
+$^I=".bak";
+my$copyRight="\n##Copyright 2012 by lexEdge\n";
+while(<>)
+{
+  #xxx
+  s{(#!/usr.*)}{$1$copyRight};  
+
+  print;
+}
+print "ok\n";
