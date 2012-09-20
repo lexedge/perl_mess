@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = ssh://github.com/lexedge/perl_mess.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "orgin"]
+	url = ssh://github.com/lexedge/perl_mess.git
+	fetch = +refs/heads/*:refs/remotes/orgin/*
