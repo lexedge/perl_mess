@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+##Copyright 2012 by lexEdge
+
+use warnings;
+use strict;
+use Text::Wrap;
+
+my $message="This is some sample text which may be longer ".
+"tsdddddddddhan the width of your output device,so it needs to ".
+"be wrapped to fit propedddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddrly as a paragraph.";
+
+print wrap("\t","  ","$message\n");

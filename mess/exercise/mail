@@ -3,3 +3,21 @@
 
 use warnings;
 use strict;
+use Net::SMTP;
+
+my$to='lex.edge.5@gmail.com';
+my$from='weiwuhao@qq.com';
+my$site='qq.com';
+my$smtp_host='mailhost';
+
+my$smtp=Net::SMTP->new($smtp_host,HELLO=>$site);
+defined($smtp)?(print "ok"):(print "no");
+$smtp->mail($from);
+$smtp->to($to);
+$smtp->data();
+
+$smtp->datasend("please make it!\n");;
+
+
+$smtp->dataend();
+$smtp->quit;
